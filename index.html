@@ -11,6 +11,8 @@
     <button onclick="cheese()">Cheese</button>
     <button onclick="ham()">Ham</button>
     <button onclick="moreBread()">More Bread</button>
+    <button onclick="eat()">Eat it</button>
+
 
     <p></p>
     <div class="wrapper" id="plate">
@@ -18,8 +20,6 @@
         <img class="sandwich" id="cheese">
         <img class="sandwich" id="ham">
         <img class="sandwich" id="moreBread">
-
-
     </div>
 </body>
 </html>
@@ -36,6 +36,9 @@
     }
     function moreBread() {
         document.getElementById("moreBread").src="images/bread.png";
+    }
+    function eat() {
+        window.location.reload();
     }
 
 </script>
