@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Can I make a sandwich?</h1>
+    <p>Click a button to add an ingredient.</p>
+
+    <button onclick="bread()">Bread</button>
+    <button onclick="cheese()">Cheese</button>
+    <button onclick="ham()">Ham</button>
+    <button onclick="moreBread()">More Bread</button>
+
+    <p></p>
+    <div class="wrapper" id="plate">
+        <img class="sandwich" id="bread">
+        <img class="sandwich" id="cheese">
+        <img class="sandwich" id="ham">
+        <img class="sandwich" id="moreBread">
+
+
+    </div>
+</body>
+</html>
+
+<script>
+    function bread() {
+        document.getElementById("bread").src="images/bread.png";
+    }
+    function cheese() {
+        document.getElementById("cheese").src="images/cheese.png";
+    }
+    function ham() {
+        document.getElementById("ham").src="images/ham.png";
+    }
+    function moreBread() {
+        document.getElementById("moreBread").src="images/bread.png";
+    }
+
+</script>
