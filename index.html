@@ -10,35 +10,37 @@
     <button onclick="bread()">Bread</button>
     <button onclick="cheese()">Cheese</button>
     <button onclick="ham()">Ham</button>
-    <button onclick="moreBread()">More Bread</button>
     <button onclick="eat()">Eat it</button>
-
-
     <p></p>
     <div class="wrapper" id="plate">
-        <img class="sandwich" id="bread">
-        <img class="sandwich" id="cheese">
-        <img class="sandwich" id="ham">
-        <img class="sandwich" id="moreBread">
     </div>
 </body>
 </html>
 
 <script>
     function bread() {
-        document.getElementById("bread").src="images/bread.png";
+        const bread = document.createElement("img");
+        bread.setAttribute("class", "sandwich");
+        bread.src = "images/bread.png";
+        const ingredient= document.getElementById("plate");
+        ingredient.append(bread);
     }
     function cheese() {
-        document.getElementById("cheese").src="images/cheese.png";
+        const cheese = document.createElement("img");
+        cheese.setAttribute("class", "sandwich");
+        cheese.src = "images/cheese.png";
+        const ingredient= document.getElementById("plate");
+        ingredient.append(cheese);
     }
     function ham() {
-        document.getElementById("ham").src="images/ham.png";
-    }
-    function moreBread() {
-        document.getElementById("moreBread").src="images/bread.png";
+        const ham = document.createElement("img");
+        ham.setAttribute("class", "sandwich");
+        ham.src = "images/ham.png";
+        const ingredient= document.getElementById("plate");
+        ingredient.append(ham);
     }
     function eat() {
         window.location.reload();
     }
-
+    
 </script>
