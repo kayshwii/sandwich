@@ -2,14 +2,15 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/sandwich.js"></script>
 </head>
 <body>
     <h1>Can I make a sandwich?</h1>
     <p>Click a button to add an ingredient.</p>
 
-    <button onclick="bread()">Bread</button>
-    <button onclick="cheese()">Cheese</button>
-    <button onclick="ham()">Ham</button>
+    <button onclick="addTopping('bread')">Bread</button>
+    <button onclick="addTopping('cheese')">Cheese</button>
+    <button onclick="addTopping('ham')">Ham</button>
     <button onclick="oops()">Remove Last Ingredient</button>
 
     <button onclick="eat()">Eat it</button>
@@ -18,35 +19,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function bread() {
-        const bread = document.createElement("img");
-        bread.setAttribute("class", "sandwich");
-        bread.src = "images/bread.png";
-        const ingredient = document.getElementById("plate");
-        ingredient.append(bread);
-    }
-    function cheese() {
-        const cheese = document.createElement("img");
-        cheese.setAttribute("class", "sandwich");
-        cheese.src = "images/cheese.png";
-        const ingredient = document.getElementById("plate");
-        ingredient.append(cheese);
-    }
-    function ham() {
-        const ham = document.createElement("img");
-        ham.setAttribute("class", "sandwich");
-        ham.src = "images/ham.png";
-        const ingredient = document.getElementById("plate");
-        ingredient.append(ham);
-    }
-    function oops() {
-        const oops= document.getElementById("plate");
-        oops.removeChild(oops.lastElementChild);
-    }
-    function eat() {
-        window.location.reload();
-    }
-    
-</script>
