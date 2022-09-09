@@ -6,16 +6,27 @@
 </head>
 <body>
     <h1>Can I make a sandwich?</h1>
-    <p>Click a button to add an ingredient.</p>
-
+    <h3>Click a button to add an ingredient.</h3>
+    
+    <!--customize the sandwich-->
     <button onclick="addTopping('bread')">Bread</button>
     <button onclick="addTopping('cheese')">Cheese</button>
     <button onclick="addTopping('ham')">Ham</button>
     <button onclick="oops()">Remove Last Ingredient</button>
-
+    <!--reload the page to "eat" the sandwich and start over-->
     <button onclick="eat()">Eat it</button>
+    <!--for testing currently, just to show the list of toppings-->
+    <button onclick="showList()">Log List</button>
     <p></p>
-    <div class="wrapper" id="plate">
-    </div>
+    
+    <!--the toppings render here on the "plate"-->
+    <div class="plate" id="plate"></div>
+    <p></p>
+
+    <!--display the list of added ingredients-->
+    <div class="history" id="history"></div>
+    <p></p>
+
+
 </body>
 </html>

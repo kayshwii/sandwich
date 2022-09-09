@@ -1,9 +1,16 @@
-.wrapper {
+.plate {
     position: relative;
+    width: 500px;
+    height: 500px;
 }
 
 .sandwich {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.history {
+    position: relative;
+    clear: both;
 }
