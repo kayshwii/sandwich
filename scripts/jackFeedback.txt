@@ -1,0 +1,4 @@
+Jack is my app's number 1 user so I will take his suggestions and try to implement them.
+
+Jack's suggestions:
+    * more ingredients.
