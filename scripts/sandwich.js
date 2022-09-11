@@ -12,7 +12,6 @@ const ingredientList = []
 function addTopping(topping) {
     ingredientList.push(topping);
     localStorage.setItem('sandwich', JSON.stringify(ingredientList));
-    let txt = "";
     for (let ingredient in ingredientList) {
         //for every topping in the array: create an image
         var slices = document.createElement("img");
@@ -22,15 +21,14 @@ function addTopping(topping) {
 
         //for every topping add a button to remove the item
         var delButton = document.createElement("button");
-        delButton.setAttribute("class", "delButton")
-        delButton.setAttribute("id", "placeholder")
-
+        delButton.setAttribute("id", "delButton")
+        delButton.textContent = topping + ' <i class="material-icons">delete</i>';
     }
     
     var plate = document.getElementById("plate");
     plate.append(slices);
     var history = document.getElementById("history");
-    history.innerHTML = txt;
+    history.append(delButton);
 }
 
 //remove the last item from ingredientList
