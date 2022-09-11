@@ -21,8 +21,13 @@ function addTopping(topping) {
 
         //for every topping add a button to remove the item
         var delButton = document.createElement("button");
-        delButton.setAttribute("id", "delButton")
-        delButton.textContent = topping + ' <i class="material-icons">delete</i>';
+        var iTag = document.createElement("i");
+        iTag.className = "material-icons";
+        iTag.innerHTML = "&#xe872;";
+        delButton.setAttribute("id", "delButton");
+        delButton.textContent = topping + " ";
+        delButton.appendChild(iTag);
+        
     }
     
     var plate = document.getElementById("plate");
