@@ -22,29 +22,40 @@ function addTopping(topping) {
         slices.value = ingredient;
         slices.id = topping + ingredient++;
         slices.src = ingredientImgs[topping];
-
-        //for every topping add a button to remove the item
-        var delButton = document.createElement("button");
-        var iTag = document.createElement("i");
-        iTag.className = "material-icons";
-        iTag.innerHTML = "&#xe872;";
-        delButton.id = slices.id;
-        delButton.textContent = topping + " ";
-        delButton.appendChild(iTag);
-        delButton.addEventListener("click", function (ingredient) {
-            ingredientList.splice(slices.value, 1);
-            document.getElementById(slices.id).remove();
-            document.getElementById(delButton.id).remove();
-        })
-
     }
-    
     var plate = document.getElementById("plate");
     plate.append(slices);
+    addToppingHistory(topping);
+}
+
+function addToppingHistory(topping) {
+    for (let ingredient in ingredientList) {
+        //for every topping add a button to remove the item
+    var delButton = document.createElement("button");
+    var iTag = document.createElement("i");
+    delButton.className = "delButton"
+    delButton.value = ingredient;
+    delButton.id = topping + ingredient++;
+    delButton.innerHTML = topping + " &#10060;";
+    delButton.appendChild(iTag);
+    }
     var history = document.getElementById("history");
     history.append(delButton);
 }
 
+document.addEventListener("click", removeTopping);
+
+function removeTopping (click) {
+    var button = click.target;
+    if (button.className == "delButton") {
+        ingredientList.splice(button.value, 1);
+        document.getElementById(button.id).remove();
+        document.getElementById(button.id).remove();
+    }
+    //ingredientList.splice(slices.value, 1);
+    //document.getElementById(slices.id).remove();
+    //document.getElementById(delButton.id).remove();
+}
 
 //eat the sandwich to reload the page and start over
 function eat() {
