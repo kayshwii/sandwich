@@ -50,6 +50,7 @@ function removeTopping (click) {
         ingredientList.splice(button.value, 1, "air");
         document.getElementById(button.id).remove();
         document.getElementById(button.id).remove();
+
     }
     //ingredientList.splice(slices.value, 1);
     //document.getElementById(slices.id).remove();
